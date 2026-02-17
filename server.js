@@ -4,6 +4,7 @@ const cors = require("cors");
 require("dotenv").config();
 
 const contactRoutes = require("./routes/contactRoutes");
+const contact2Routes = require("./routes/contact2Routes");
 
 const app = express();
 
@@ -13,6 +14,7 @@ app.use(express.json());
 
 // Routes
 app.use("/api/contact", contactRoutes);
+app.use("/api/contact", contact2Routes);
 
 // MongoDB Connection
 mongoose
